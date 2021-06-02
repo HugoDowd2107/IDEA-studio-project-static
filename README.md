@@ -1,0 +1,1 @@
+# IDEA-studio-project-static
