@@ -1,0 +1,207 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timecapsule</title>
+    <script language="javascript" type="module" src="{{ url_for('static', filename='enjoyTheLights.js') }}"></script>
+    <style>
+
+       
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    /* https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+
+    @keyframes slideFromTop {
+        0% { top: 10%; }
+        100% { top: 60%; }
+          } 
+
+      @keyframes showText {
+        0% { opacity: 0%; }
+        100% {opacity: 100% }
+      }
+
+    
+
+    html {
+      background-color: rgb(5, 3, 14);
+    }
+    
+    .background {
+      background-image: radial-gradient(circle at center, rgb(95, 72, 42) 0, rgb(36, 61, 46), rgb(55, 98, 84) 100%);
+      filter: blur(150px);
+      height: 100%;
+
+    }
+
+    .boxImage {
+      
+      position: absolute;
+      margin: auto;
+      top: -20%;
+      bottom: 0%;
+      left: -30%;
+    
+
+    }
+
+    svg {
+
+      width: 160vw;
+      height: auto;
+      position: absolute;
+      top: 0%;
+      margin-left: auto;
+      margin-right: auto;
+     
+     
+
+    }
+
+    .ball {
+      transform: scale(0.4);
+      position: absolute;
+      margin-left: 17%;
+      margin-right: 20%;
+      top: 10%;
+      animation: slideFromTop 2s 1s ease-out 1;
+      animation-fill-mode: forwards;  
+      
+    }
+
+    .socialsDiv {
+          position: absolute;
+      margin: auto;
+      top: 5%;
+      right: 10%;
+      bottom: 0;
+      left: 10%;
+      text-align: center;
+      font-size: 5.5vw;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      animation: showText 2s 3s;
+      animation-fill-mode: forwards;
+      opacity: 0%;
+            
+            }
+
+    .question {
+            font-size: 7vw;
+            line-height: 1.3;
+            
+        }
+
+    .links {
+      text-decoration: underline;
+      color: white;
+    }
+
+    .circleBase {
+        fill: rgb(255, 149, 100)
+    }
+
+    a:link, a:visited, a:active, a:hover { 
+
+      color: white; 
+      text-decoration: none;
+    }
+
+
+</style>
+</head>
+
+    <div class="background"></div>
+
+    
+
+    <div class="ball">
+      <svg class="ballSVG" width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <circle class="circleBase" onload="changeCircleColour()" cx="43" cy="43" r="43" />
+        <circle cx="43" cy="43" r="43" fill="url(#paint0_radial)"/>
+        <defs>
+        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(27 52) rotate(-48.7723) scale(64.4864)">
+        <stop stop-color="white" stop-opacity="0.87"/>
+        <stop offset="0.308101" stop-color="white" stop-opacity="0.583333"/>
+        <stop offset="0.713767" stop-color="white" stop-opacity="0.2725"/>
+        <stop offset="1" stop-color="white" stop-opacity="0.1"/>
+        </radialGradient>
+        </defs>
+        </svg>
+        
+
+    </div>
+
+
+    <div class="boxImage">
+
+      <svg width="625" height="1148" viewBox="0 0 625 1148" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M312.5 492L74 570.809L312.5 649.618V492Z" fill="url(#paint0_linear)" fill-opacity="0.7"/>
+        <path d="M312.5 492L551 570.809L312.5 649.618V492Z" fill="url(#paint1_linear)" fill-opacity="0.7"/>
+        <path d="M312.5 649.618L74 570.809L312.5 492M312.5 649.618V492M312.5 649.618L551 570.809L312.5 492" stroke="url(#paint2_linear)" stroke-opacity="0.32" stroke-width="4"/>
+        <path d="M313.64 650.69L552.239 571.242L625 650.69L398.217 744L313.64 650.69Z" fill="white"/>
+        <path d="M10.9867 577.241L249.585 497.793L317.993 492L76.9179 571.241L10.9867 577.241Z" fill="white"/>
+        <path d="M0 650.69L76.9179 571.241L317.993 649.24L224.502 744L0 650.69Z" fill="white"/>
+        <path d="M317.993 492L377.073 497.793L597.637 571.241L552.239 571.241L317.993 492Z" fill="white"/>
+        <path d="M74 571L312.5 649.809V1145.31L74 1066.5L74 571Z" fill="url(#paint3_linear)" fill-opacity="0.7"/>
+        <path d="M312.5 649.809L74 571L74 1066.5L312.5 987.691V649.809Z" fill="url(#paint4_linear)" fill-opacity="0.7"/>
+        <path d="M312.5 649.809L551 571V1066.5L312.5 987.691V649.809Z" fill="url(#paint5_linear)" fill-opacity="0.7"/>
+        <path d="M551 571L312.5 649.809V1145.31L551 1066.5V571Z" fill="url(#paint6_linear)" fill-opacity="0.7"/>
+        <path d="M312.5 649.809L74 571L74 1066.5M312.5 649.809V1145.31M312.5 649.809V987.691M312.5 649.809L551 571V1066.5M312.5 1145.31L74 1066.5M312.5 1145.31L551 1066.5M74 1066.5L312.5 987.691M312.5 987.691L551 1066.5" stroke="url(#paint7_linear)" stroke-opacity="0.32" stroke-width="4"/>
+        <path d="M77 0H564L517.5 594L315 660.5L103 592L77 0Z" fill="url(#paint8_linear)" fill-opacity="0.7"/>
+        <path d="M318 649L96.5 578.5L77 682L224.5 743.5L315.5 652.5L398 743.5L522.5 693.5L531 578.5L318 649Z" fill="white"/>
+        <defs>
+        <linearGradient id="paint0_linear" x1="312.5" y1="492" x2="313" y2="1145" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="312.5" y1="492" x2="313" y2="1145" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint2_linear" x1="312.5" y1="492" x2="312.5" y2="1145.12" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint3_linear" x1="312.5" y1="492.191" x2="313" y2="1145.19" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint4_linear" x1="312.5" y1="492.191" x2="313" y2="1145.19" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint5_linear" x1="312.5" y1="492.191" x2="313" y2="1145.19" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint6_linear" x1="312.5" y1="492.191" x2="313" y2="1145.19" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#181818"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint7_linear" x1="312.5" y1="492.191" x2="312.5" y2="1145.31" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint8_linear" x1="309" y1="0.5" x2="307" y2="660" gradientUnits="userSpaceOnUse">
+        <stop offset="0.412621" stop-color="#FFF59F" stop-opacity="0"/>
+        <stop offset="1" stop-color="#FFF8B7"/>
+        </linearGradient>
+        </defs>
+        </svg>
+
+    </div>
+
+    <div class="socialsDiv">
+      <span class="socials"> Tag us on social media <br><br> #MAPMIMA <br> #TimeCapsule </span>
+      <span class="links"> <br><br><a href="explanation.html">Back to homepage</a> <br><br> <a href="timecapsule.html">View timecapsule</a>  </span>
+     
+
+
+  </div>
+
+    
+
